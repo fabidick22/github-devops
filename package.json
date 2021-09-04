@@ -1,6 +1,6 @@
 {
-    "name": "delete-test-01",
-    "description": "delete-test-01-description",
+    "name": "github-devops",
+    "description": "Github flow implementation",
     "version": "0.0.1",
     "private": true,
     "dependencies": {
