@@ -1,0 +1,34 @@
+name: "CI/Code Analysis"
+
+on:
+  pull_request:
+      types: [opened, synchronize, reopened]
+jobs:
+  sonarcloud:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+  dependency-checker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Marcisbee/dependency-check-action
+        with:
+          PATH: "."
+
+  detect-secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: detect-secrets
+        uses: reviewdog/action-detect-secrets@master
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          reporter: github-pr-review
