@@ -21,10 +21,10 @@ jobs:
       id: build_package
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      uses: ridedott/release-me-action@master
+      uses: ridedott/release-me-action@v3.5.53
       with:
         node-module: true
-        release-branches: '["master"]'
+        release-branches: '["main", "master"]'
 
     - name: Update dev environment version
       if: steps.build_package.outputs.released == 'true'
