@@ -1,3 +1,13 @@
+## [1.1.1](https://github.com/fabidick22/github-devops/compare/v1.1.0...v1.1.1) (2021-09-04)
+
+### Bug Fixes
+
+- remove incorrect commands in action ([9a60696](https://github.com/fabidick22/github-devops/commit/9a6069692f835ab0165a652eeadb78df934f666c))
+
+### Other
+
+- Merge branch 'ci-pipeline' of github.com:fabidick22/github-devops into ci-pipeline ([c5470ec](https://github.com/fabidick22/github-devops/commit/c5470eca33fd628a1e7031fd80c5de6682f306dc))
+
 # [1.1.0](https://github.com/fabidick22/github-devops/compare/v1.0.0...v1.1.0) (2021-09-04)
 
 ### Features
