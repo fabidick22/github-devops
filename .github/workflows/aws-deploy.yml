@@ -1,0 +1,90 @@
+name: "CD/Deploy to AWS"
+
+on:
+  push:
+    paths:
+      - '.version.json'
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    env:
+      VERSION: ""
+      VERSION_FILE: ".version.json"
+      AWS_PROFILE: "personal-prod"
+      STACK_NAME: "github-devops"
+      COMMENT: ""
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get prod version
+        run: |
+          desired_version=$(jq -r '.prod' $VERSION_FILE)
+          echo VERSION=$(echo desired_version) >> $GITHUB_ENV
+
+      - uses: actions/checkout@v2
+        if: ${{ success() }}
+        with:
+          ref: ${{ env.VERSION }}
+          fetch-depth: 0
+
+      - name: "Setup Python"
+        uses: actions/setup-python@v2
+
+      - name: "Setup AWS SAM"
+        uses: aws-actions/setup-sam@v1
+
+      - name: Configure AWS credentials
+        if: steps.build_package.outputs.released == 'true'
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+
+      - name: Add profile credentials to ~/.aws/credentials
+        run: |
+          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }} --profile $AWS_PROFILE
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }} --profile $AWS_PROFILE
+
+      - name: sam build
+        run: sam build --parameter-overrides ParameterKey=Version,ParameterValue=${{ env.VERSION }}
+
+      - name: sam deploy
+        id: aws_sam_deploy
+        run: sam deploy --no-fail-on-empty-changeset --no-confirm-changeset --stack-name ${{ env.STACK_NAME }} --parameter-overrides ParameterKey=Version,ParameterValue=${{ env.VERSION }}"
+
+      - name: Get CF Outputs
+        id: urls
+        run: |
+          outputs=$(aws cloudformation describe-stacks --stack-name ${{ env.STACK_NAME}} --profile ${{ env.AWS_PROFILE}} | jq -cr '.Stacks[0].Outputs')
+          if [[ $outputs != null ]] ; then
+              echo "$outputs" | jq -c '.[]' | while read -r line; do
+                  key=$(echo "$line" | jq -r '.OutputKey')
+                  value=$(echo "$line" | jq -r '.OutputValue')
+                  echo "::set-output name=cf_output_$key::$value"
+              done
+          fi
+        env:
+          STACK_NAME: ${{ env.STACK_NAME}}
+
+      - name: Build Notification
+        run: |
+          message="Something is wrong, please check the logs"
+          if [[ "${{ steps.aws_sam_deploy.outcome }}" != "failure" ]]; then
+              message="*Version:* ${{ env.VERSION }} "
+              message+="*API URL:* <$API_URL|My API> "
+          fi
+          echo COMMENT=$(echo $message) >> $GITHUB_ENV
+        env:
+          API_URL: '${{ steps.urls.outputs.cf_output_WebEndpoint }}'
+          VERSION: '${{ steps.urls.outputs.cf_output_WebEndpoint }}'
+
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2.0.2
+        env:
+          SLACK_COLOR: '#06E81D'
+          SLACK_TITLE: ':tada: New version deployed (*${{ env.STACK_NAME }}*) :rocket: :computer:'
+          SLACK_MESSAGE: ${{ env.COMMENT }}
+          SLACK_USERNAME: devops-bot
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
