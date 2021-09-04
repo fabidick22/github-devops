@@ -24,7 +24,7 @@ Resources:
       Description: Main function
       Environment:
         Variables:
-          API_VERSION: !Sub "${Environment}"
+          API_VERSION: !Sub "${Version}"
       Events:
         Api:
           Type: Api
