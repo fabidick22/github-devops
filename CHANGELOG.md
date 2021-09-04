@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/fabidick22/github-devops/compare/v1.0.0...v1.1.0) (2021-09-04)
+
+### Features
+
+- add version file ([ef0e168](https://github.com/fabidick22/github-devops/commit/ef0e168d23d1bd172d505f5498086574f805cc1e))
+- write in file version ([6142702](https://github.com/fabidick22/github-devops/commit/6142702683fe6a60e5e1ced4295bb9962d39906e))
+
 # 1.0.0 (2021-09-04)
 
 ### Bug Fixes
