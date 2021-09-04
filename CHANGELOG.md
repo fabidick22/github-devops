@@ -1,3 +1,16 @@
+## [1.2.1](https://github.com/fabidick22/github-devops/compare/v1.2.0...v1.2.1) (2021-09-04)
+
+### Bug Fixes
+
+- update desired_version vatiable ([0d8a67d](https://github.com/fabidick22/github-devops/commit/0d8a67df8a943117721b4222a95033bc96ee51d2))
+
+### Other
+
+- Merge pull request #8 from fabidick22/update-aws-deploy ([5edba15](https://github.com/fabidick22/github-devops/commit/5edba1507098a0c4a438a1936749fca827672cb0)), closes [#8](https://github.com/fabidick22/github-devops/issues/8)
+- Merge pull request #7 from fabidick22/update-prod-version ([73ce108](https://github.com/fabidick22/github-devops/commit/73ce10826d8d8fd63e438b6e325f201e2c2f6409)), closes [#7](https://github.com/fabidick22/github-devops/issues/7)
+- deploy v1.1.0 ([44464e8](https://github.com/fabidick22/github-devops/commit/44464e838e94ee54635cac0124a14fc4beb624c1))
+- Update file version ([e713543](https://github.com/fabidick22/github-devops/commit/e713543420e002dca849f2189a3f9599503b49f7))
+
 # [1.2.0](https://github.com/fabidick22/github-devops/compare/v1.1.2...v1.2.0) (2021-09-04)
 
 ### Bug Fixes
