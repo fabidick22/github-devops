@@ -59,7 +59,8 @@ jobs:
         with:
           fetch-depth: 0
       - name: detect-secrets
-        uses: reviewdog/action-detect-secrets@master
+        uses: reviewdog/action-detect-secrets@v0.6.1
         with:
           github_token: ${{ secrets.GH_TOKEN }}
+          fail_on_error: true
           reporter: github-pr-review
