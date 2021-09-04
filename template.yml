@@ -1,0 +1,115 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Github flow
+
+Transform:
+- AWS::Serverless-2016-10-31
+
+Globals:
+  Function:
+    Runtime: nodejs12.x
+    Tracing: Active
+    MemorySize: 128
+    Timeout: 100
+
+Resources:
+  mainFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/common-handlers/main.mainHandler
+      Description: Main function
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /
+            Method: GET
+
+  putClientFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/common-handlers/put-client.putClientHandler
+      Description: HTTP post method to add one client to a DynamoDB table.
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ClientTable
+      Environment:
+        Variables:
+          CLIENT_TABLE: !Ref ClientTable
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /add
+            Method: POST
+
+  getAllClientsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/common-handlers/get-all-clients.getAllClientHandler
+      Description: HTTP get method to get all clients from a DynamoDB table.
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ClientTable
+      Environment:
+        Variables:
+          CLIENT_TABLE: !Ref ClientTable
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /clients
+            Method: GET
+
+  getClientByIdFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/common-handlers/get-client-by-id.getClientByIdHandler
+      Description: HTTP post method to get client by id from DynamoDB table.
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ClientTable
+      Environment:
+        Variables:
+          CLIENT_TABLE: !Ref ClientTable
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /clients/{id}
+            Method: GET
+
+  getClientByNameFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/common-handlers/get-client-by-name.getClientByNameHandler
+      Description: HTTP post method to get client by id from DynamoDB table.
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ClientTable
+      Environment:
+        Variables:
+          CLIENT_TABLE: !Ref ClientTable
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /clients/name/{name}
+            Method: GET
+
+
+  ClientTable:
+    Type: AWS::Serverless::SimpleTable
+    Properties:
+      TableName: "ClientsTable"
+      PrimaryKey:
+        Name: id
+        Type: String
+      ProvisionedThroughput:
+        ReadCapacityUnits: 2
+        WriteCapacityUnits: 2
+
+Outputs:
+  WebEndpoint:
+    Description: "API Gateway endpoint URL for Prod stage"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"

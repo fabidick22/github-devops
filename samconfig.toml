@@ -1,0 +1,11 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "github-devops"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-172ds4uuudm3u"
+s3_prefix = "github-devops"
+region = "us-east-2"
+profile = "personal-prod"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
