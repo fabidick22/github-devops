@@ -1,3 +1,15 @@
+## [1.2.5](https://github.com/fabidick22/github-devops/compare/v1.2.4...v1.2.5) (2021-09-04)
+
+### Bug Fixes
+
+- remove condition in configure-aws-credentials action ([11effb5](https://github.com/fabidick22/github-devops/commit/11effb51b67cd91f491543f83903939d574ef145))
+
+### Other
+
+- Merge pull request #13 from fabidick22/fix/aws-deploy ([b6bdec0](https://github.com/fabidick22/github-devops/commit/b6bdec0041e62aa0135d1937a9d06915968eab39)), closes [#13](https://github.com/fabidick22/github-devops/issues/13)
+- Deploy to prod ([bf13975](https://github.com/fabidick22/github-devops/commit/bf13975fd98657435c12f545c26bc74a6a195187))
+- Update file version ([d32ede3](https://github.com/fabidick22/github-devops/commit/d32ede32040a12941efdae0258df63b29530d791))
+
 ## [1.2.4](https://github.com/fabidick22/github-devops/compare/v1.2.3...v1.2.4) (2021-09-04)
 
 ### Bug Fixes
