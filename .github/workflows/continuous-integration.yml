@@ -3,7 +3,7 @@ name: "CI/Build Artefact"
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   release-version:
