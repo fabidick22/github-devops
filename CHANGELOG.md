@@ -1,3 +1,20 @@
+## [1.2.3](https://github.com/fabidick22/github-devops/compare/v1.2.2...v1.2.3) (2021-09-04)
+
+### Bug Fixes
+
+- set url api like envrionment variable ([8beab76](https://github.com/fabidick22/github-devops/commit/8beab76d06657df97cd3feb99bd0705eb4954d52))
+- update parameter configured to main function ([b3d2a9a](https://github.com/fabidick22/github-devops/commit/b3d2a9ad7fdda43dc68eee9a2a882c58a99315b1))
+
+### Code Refactoring
+
+- add version to main function ([f2dafaa](https://github.com/fabidick22/github-devops/commit/f2dafaa0943fe3adda05a3db9ccb856687109245))
+
+### Other
+
+- Merge pull request #11 from fabidick22/fix/update-deploy-pipeline ([a0c6955](https://github.com/fabidick22/github-devops/commit/a0c69557277afac10ac9efcf47d49eab63ccfda7)), closes [#11](https://github.com/fabidick22/github-devops/issues/11)
+- deploy to prod env ([ac7049d](https://github.com/fabidick22/github-devops/commit/ac7049dd2bf7631ae023aae1e45793196a24d559))
+- Update file version ([969fd08](https://github.com/fabidick22/github-devops/commit/969fd08f25133f9e70f3c82df92cfc1b4787ecaa))
+
 ## [1.2.2](https://github.com/fabidick22/github-devops/compare/v1.2.1...v1.2.2) (2021-09-04)
 
 ### Bug Fixes
