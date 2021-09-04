@@ -1,3 +1,22 @@
+## [1.2.4](https://github.com/fabidick22/github-devops/compare/v1.2.3...v1.2.4) (2021-09-04)
+
+### Bug Fixes
+
+- allow fake secret in code ([44045d4](https://github.com/fabidick22/github-devops/commit/44045d45601d3dc401d2763d9359f864994619c5))
+- enable fail on error for detect-secrets action ([0bd53a7](https://github.com/fabidick22/github-devops/commit/0bd53a7ede4bfdcdd7716f7b95e22e1471ce859a))
+- updeta query to get users by name ([9fa4a8e](https://github.com/fabidick22/github-devops/commit/9fa4a8e1b265edcd20c14e210cd9213ef3ed9e5c))
+
+### Code Style
+
+- add passwd for testing purpose ([2929d7d](https://github.com/fabidick22/github-devops/commit/2929d7dfe8eed7676ca6bb3399db68dcfde2151c))
+- update colores to slack notification ([836ddf4](https://github.com/fabidick22/github-devops/commit/836ddf4fda002ae18ba1c2e37a9e3e16ff6b34de))
+
+### Other
+
+- Merge pull request #12 from fabidick22/fix/search-by-name ([f743869](https://github.com/fabidick22/github-devops/commit/f743869810849029d505bc08a2045efe20a8cff7)), closes [#12](https://github.com/fabidick22/github-devops/issues/12)
+- deploy to prod ([f0a935c](https://github.com/fabidick22/github-devops/commit/f0a935c6297a99310f7adf31b2f7f3366c7a80f0))
+- Update file version ([6b1c792](https://github.com/fabidick22/github-devops/commit/6b1c792d79e10a8f2bda8ea6866a15d305659220))
+
 ## [1.2.3](https://github.com/fabidick22/github-devops/compare/v1.2.2...v1.2.3) (2021-09-04)
 
 ### Bug Fixes
