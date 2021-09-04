@@ -44,7 +44,7 @@ jobs:
       run: |
         message="There are no relevant changes"
         if [[ "${{ steps.build_package.outputs.released }}" == "true" ]]; then
-            message="*Release version:* <$RELEASE_URL|${{ steps.build_package.outputs.version }}>  "
+            message="*Release version:* <$RELEASE_URL|v${{ steps.build_package.outputs.version }}>  "
             message+="*App:* $STACK_NAME "
         fi
         echo COMMENT=$(echo $message) >> $GITHUB_ENV
