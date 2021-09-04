@@ -22,7 +22,7 @@ jobs:
       - name: Get prod version
         run: |
           desired_version=$(jq -r '.prod' $VERSION_FILE)
-          echo VERSION=$(echo desired_version) >> $GITHUB_ENV
+          echo VERSION=$(echo $desired_version) >> $GITHUB_ENV
 
       - uses: actions/checkout@v2
         if: ${{ success() }}
