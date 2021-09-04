@@ -56,7 +56,7 @@ jobs:
       if: steps.build_package.outputs.released == 'true'
       uses: rtCamp/action-slack-notify@v2.0.2
       env:
-        SLACK_COLOR: '#06E81D'
+        SLACK_COLOR: '#3333FF'
         SLACK_TITLE: ':package: Release details (*${{ env.STACK_NAME }}*) :package: :building_construction:'
         SLACK_MESSAGE: ${{ env.COMMENT }}
         SLACK_USERNAME: devops-bot
