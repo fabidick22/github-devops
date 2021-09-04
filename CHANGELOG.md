@@ -1,3 +1,27 @@
+# [1.2.0](https://github.com/fabidick22/github-devops/compare/v1.1.2...v1.2.0) (2021-09-04)
+
+### Bug Fixes
+
+- add main branch to trigger ([280ea6c](https://github.com/fabidick22/github-devops/commit/280ea6cc21f55e82c9f6831545ea24f510db02d0))
+
+### Code Refactoring
+
+- update environment variables ([1663f5f](https://github.com/fabidick22/github-devops/commit/1663f5f9f6ae5f38a1305811db5f28f722624ede))
+
+### Code Style
+
+- Add version parameter ([6a803dd](https://github.com/fabidick22/github-devops/commit/6a803ddd5b75d6984fc0552fa087c452ebc9f813))
+- Update message notification ([e6ed54d](https://github.com/fabidick22/github-devops/commit/e6ed54d837543446b77d59981b34a241e8809a6e))
+
+### Features
+
+- add aws deploy pipeline ([1e4beff](https://github.com/fabidick22/github-devops/commit/1e4beffa59edde5686c65b8710af1f5de22b1102))
+
+### Other
+
+- Merge pull request #6 from fabidick22/add-aws-deploy-pipeline ([dc75bbc](https://github.com/fabidick22/github-devops/commit/dc75bbc9cffe6694b2223dbe70d1a3b6b6c55a0d)), closes [#6](https://github.com/fabidick22/github-devops/issues/6)
+- Update file version ([f96f659](https://github.com/fabidick22/github-devops/commit/f96f6597cbb9becf1eb5c516fb779561f87e0c37))
+
 ## [1.1.2](https://github.com/fabidick22/github-devops/compare/v1.1.1...v1.1.2) (2021-09-04)
 
 ### Bug Fixes
