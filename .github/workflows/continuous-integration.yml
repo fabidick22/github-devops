@@ -32,7 +32,6 @@ jobs:
       run: |
         tmp=$(mktemp)
         jq '.dev = "v${{ steps.build_package.outputs.version }}"' $VERSION_FILE > "$tmp" && mv "$tmp" $VERSION_FILE
-        git check
 
     - name: Update resources
       if: ${{ success() }}
