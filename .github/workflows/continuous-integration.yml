@@ -1,0 +1,49 @@
+name: "CI/Build Artefact"
+
+on:
+  push:
+    branches:
+      - master
+      - ci-pipeline
+
+jobs:
+  release-version:
+    runs-on: ubuntu-latest
+    env:
+      STACK_NAME: "github-devops"
+      COMMENT: ""
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Release
+      id: build_package
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      uses: ridedott/release-me-action@master
+      with:
+        node-module: true
+        release-branches: '["master", "ci-pipeline"]'
+
+    - name: Build Notification
+      run: |
+        message="There are no relevant changes"
+        if [[ "${{ steps.build_package.outputs.released }}" == "true" ]]; then
+            message="*Release version:* <$RELEASE_URL|${{ steps.build_package.outputs.version }}>  "
+            message+="*App:* $STACK_NAME "
+        fi
+        echo COMMENT=$(echo $message) >> $GITHUB_ENV
+      env:
+        RELEASE_URL: 'https://github.com/${{ github.repository }}/releases/tag/v${{ steps.build_package.outputs.version }}'
+        STACK_NAME: ${{ env.STACK_NAME }}
+
+    - name: Slack Notification
+      if: steps.build_package.outputs.released == 'true'
+      uses: rtCamp/action-slack-notify@v2.0.2
+      env:
+        SLACK_COLOR: '#06E81D'
+        SLACK_TITLE: 'Release details (*${{ env.STACK_NAME }}*) :rocket: :computer:'
+        SLACK_MESSAGE: ${{ env.COMMENT }}
+        SLACK_USERNAME: devops-bot
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
