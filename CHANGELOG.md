@@ -1,3 +1,16 @@
+## [1.2.2](https://github.com/fabidick22/github-devops/compare/v1.2.1...v1.2.2) (2021-09-04)
+
+### Bug Fixes
+
+- update aws deploy pipeline - remove quotes ([a8cb8a8](https://github.com/fabidick22/github-devops/commit/a8cb8a8d1f65f469b4f603d1adcd8c80a304a49f))
+
+### Other
+
+- Merge pull request #10 from fabidick22/deploy-prod ([66113e0](https://github.com/fabidick22/github-devops/commit/66113e0a1cd3cd43fa2e3f2a45defad50d066e77)), closes [#10](https://github.com/fabidick22/github-devops/issues/10)
+- Merge pull request #9 from fabidick22/deploy-prod ([4f0fb82](https://github.com/fabidick22/github-devops/commit/4f0fb82d0d6434328d5d20d1b4d7c3af9d7f5bb9)), closes [#9](https://github.com/fabidick22/github-devops/issues/9)
+- deploy v1.1.1 ([4e541f9](https://github.com/fabidick22/github-devops/commit/4e541f9e26e5a1f85f63af3705e5df7f6b1fd34a))
+- Update file version ([f3bc126](https://github.com/fabidick22/github-devops/commit/f3bc12650540d6b4172fcc73433a85b3ef61c2b0))
+
 ## [1.2.1](https://github.com/fabidick22/github-devops/compare/v1.2.0...v1.2.1) (2021-09-04)
 
 ### Bug Fixes
