@@ -57,7 +57,7 @@ jobs:
       uses: rtCamp/action-slack-notify@v2.0.2
       env:
         SLACK_COLOR: '#06E81D'
-        SLACK_TITLE: 'Release details (*${{ env.STACK_NAME }}*) :rocket: :computer:'
+        SLACK_TITLE: 'Release details (*${{ env.STACK_NAME }}*) :package: :computer:'
         SLACK_MESSAGE: ${{ env.COMMENT }}
         SLACK_USERNAME: devops-bot
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

@@ -5,6 +5,10 @@ Description: >-
 Transform:
 - AWS::Serverless-2016-10-31
 
+Parameters:
+  Version:
+    Type: String
+
 Globals:
   Function:
     Runtime: nodejs12.x
