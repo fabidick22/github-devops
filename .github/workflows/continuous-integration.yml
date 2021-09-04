@@ -24,7 +24,7 @@ jobs:
       uses: ridedott/release-me-action@v3.5.53
       with:
         node-module: true
-        release-branches: '["main"]'
+        release-branches: '["main", "master"]'
 
     - name: Update dev environment version
       if: steps.build_package.outputs.released == 'true'
