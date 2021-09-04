@@ -2,6 +2,8 @@ name: "CD/Deploy to AWS"
 
 on:
   push:
+    branches:
+      - main
     paths:
       - '.version.json'
 
