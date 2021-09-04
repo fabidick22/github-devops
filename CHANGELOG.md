@@ -1,3 +1,26 @@
+## [1.1.2](https://github.com/fabidick22/github-devops/compare/v1.1.1...v1.1.2) (2021-09-04)
+
+### Bug Fixes
+
+- add master branch ([53d669c](https://github.com/fabidick22/github-devops/commit/53d669c2da1dd2cc83eb52e5f9c2318125ab0bfc))
+- change release branch from master to main and set specific version ([5066a04](https://github.com/fabidick22/github-devops/commit/5066a04e23fd429fc21e162f699f1765b3dc645b))
+- update trigger branch ([7140725](https://github.com/fabidick22/github-devops/commit/714072567e3179ec2cd3b1b6c52e646d52f71b2e))
+
+### Code Refactoring
+
+- remove ci-pipeline branch from trigger ([abe40e3](https://github.com/fabidick22/github-devops/commit/abe40e3dac79e3df774485d603e5ecf7914e6bd7))
+
+### Code Style
+
+- Update message notification ([bf442b3](https://github.com/fabidick22/github-devops/commit/bf442b343a35d0c3f9af1038f7fb8cd2197f001a))
+
+### Other
+
+- Merge pull request #5 from fabidick22/fix/update-ci ([adcc6b7](https://github.com/fabidick22/github-devops/commit/adcc6b73f4f95553cf02bd9c0aeea0dbdb81f7ae)), closes [#5](https://github.com/fabidick22/github-devops/issues/5)
+- Merge pull request #4 from fabidick22/ci-pipeline ([6a26304](https://github.com/fabidick22/github-devops/commit/6a26304aa623ab7772351c2d3e943cf4a81c3e01)), closes [#4](https://github.com/fabidick22/github-devops/issues/4)
+- Merge branch 'main' into ci-pipeline ([fbe8fa5](https://github.com/fabidick22/github-devops/commit/fbe8fa577d6dadc211565a31357142fbc77805ef))
+- Update file version ([6d476f9](https://github.com/fabidick22/github-devops/commit/6d476f99b7f76229af5f8792bb0fa8051f594e20))
+
 ## [1.1.1](https://github.com/fabidick22/github-devops/compare/v1.1.0...v1.1.1) (2021-09-04)
 
 ### Bug Fixes
