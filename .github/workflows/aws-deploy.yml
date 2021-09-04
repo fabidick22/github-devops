@@ -54,7 +54,7 @@ jobs:
 
       - name: sam deploy
         id: aws_sam_deploy
-        run: sam deploy --no-fail-on-empty-changeset --no-confirm-changeset --stack-name ${{ env.STACK_NAME }} --parameter-overrides ParameterKey=Version,ParameterValue=${{ env.VERSION }}"
+        run: sam deploy --no-fail-on-empty-changeset --no-confirm-changeset --stack-name ${{ env.STACK_NAME }} --parameter-overrides ParameterKey=Version,ParameterValue=${{ env.VERSION }}
 
       - name: Get CF Outputs
         id: urls
@@ -80,8 +80,8 @@ jobs:
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2.0.2
         env:
-          SLACK_COLOR: '#06E81D'
-          SLACK_TITLE: ':tada: New version deployed (*${{ env.STACK_NAME }}*) :rocket: :computer:'
+          SLACK_COLOR: '#3333FF'
+          SLACK_TITLE: ':rocket: New version deployed (*${{ env.STACK_NAME }}*) :rocket: :tada:'
           SLACK_MESSAGE: ${{ env.COMMENT }}
           SLACK_USERNAME: devops-bot
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
