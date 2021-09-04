@@ -22,6 +22,9 @@ Resources:
     Properties:
       Handler: src/common-handlers/main.mainHandler
       Description: Main function
+      Environment:
+        Variables:
+          API_VERSION: !Sub "${Version}"
       Events:
         Api:
           Type: Api
