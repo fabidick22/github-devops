@@ -1,4 +1,6 @@
 
+const apiVersion = process.env.API_VERSION;
+
 exports.mainHandler = async (event) => {
   if (event.httpMethod !== 'GET') {
     throw new Error(`mainMethod only accept GET method, you tried: ${event.httpMethod}`);
@@ -8,7 +10,8 @@ exports.mainHandler = async (event) => {
     statusCode: 200,
     body: JSON.stringify({
       msg: "This is the app index",
-      endpoints: ["/clients", "/clients/{id}", "/clients/name/{name}"]
+      endpoints: ["/clients", "/clients/{id}", "/clients/name/{name}"],
+      version: apiVersion
     })
   };
  
