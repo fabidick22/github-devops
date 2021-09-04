@@ -11,17 +11,17 @@ exports.getClientByNameHandler = async (event) => {
  
   const name = event.pathParameters.name;
  
-/*  var params = {
+  const params = {
     TableName : tableName,
     FilterExpression: "name = :nameCli",
     ExpressionAttributeValues: {
       ":nameCli": name
     },
-  };*/
-  var params = {
+  };
+/*  var params = {
     TableName : tableName,
     Key: { name: name },
-  };
+  };*/
   const data = await docClient.get(params).promise();
   const item = data.Item;
  
