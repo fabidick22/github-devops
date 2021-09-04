@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - ci-pipeline
 
 jobs:
   release-version:
@@ -25,7 +24,7 @@ jobs:
       uses: ridedott/release-me-action@master
       with:
         node-module: true
-        release-branches: '["master", "ci-pipeline"]'
+        release-branches: '["master"]'
 
     - name: Update dev environment version
       if: steps.build_package.outputs.released == 'true'
