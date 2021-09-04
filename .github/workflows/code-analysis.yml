@@ -19,7 +19,7 @@ jobs:
   dependency-checker:
     runs-on: ubuntu-latest
     steps:
-      - uses: Marcisbee/dependency-check-action
+      - uses: Marcisbee/dependency-check-action@1.0.1
         with:
           PATH: "."
 
