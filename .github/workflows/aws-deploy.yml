@@ -73,9 +73,11 @@ jobs:
           message="Something is wrong, please check the logs"
           if [[ "${{ steps.aws_sam_deploy.outcome }}" != "failure" ]]; then
               message="*Version:* ${{ env.VERSION }} "
-              message+="*API URL:* <${{ steps.urls.outputs.cf_output_WebEndpoint }}|My API> "
+              message+="*API URL:* <$API_URL|My API> "
           fi
           echo COMMENT=$(echo $message) >> $GITHUB_ENV
+        env:
+          API_URL: ${{ steps.urls.outputs.cf_output_WebEndpoint }}
 
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2.0.2
