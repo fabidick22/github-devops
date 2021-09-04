@@ -82,7 +82,7 @@ jobs:
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2.0.2
         env:
-          SLACK_COLOR: '#3333FF'
+          SLACK_COLOR: '#06E81D'
           SLACK_TITLE: ':rocket: New version deployed (*${{ env.STACK_NAME }}*) :rocket: :tada:'
           SLACK_MESSAGE: ${{ env.COMMENT }}
           SLACK_USERNAME: devops-bot
