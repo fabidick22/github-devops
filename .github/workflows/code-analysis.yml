@@ -4,6 +4,17 @@ on:
   pull_request:
       types: [opened, synchronize, reopened]
 jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: NPM install
+        run: npm install
+      - name: Run npm test
+        run: npm test
+
   sonarcloud:
     runs-on: ubuntu-latest
     steps:
