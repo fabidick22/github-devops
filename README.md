@@ -1,3 +1,6 @@
+[![CD/Deploy to AWS](https://github.com/fabidick22/github-devops/actions/workflows/aws-deploy.yml/badge.svg)](https://github.com/fabidick22/github-devops/actions/workflows/aws-deploy.yml)
+[![CI/Build Artefact](https://github.com/fabidick22/github-devops/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/fabidick22/github-devops/actions/workflows/continuous-integration.yml)
+[![CI/Code Analysis](https://github.com/fabidick22/github-devops/actions/workflows/code-analysis.yml/badge.svg)](https://github.com/fabidick22/github-devops/actions/workflows/code-analysis.yml)
 # github-devops
 Github flow implementation
 
