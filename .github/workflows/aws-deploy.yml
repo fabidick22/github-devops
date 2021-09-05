@@ -2,7 +2,8 @@ name: "CD/Deploy to AWS"
 
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '5 4 * * *' # every-5-hour
+    #- cron: '*/10 * * * *' # every-10-minute
   push:
     branches:
       - main
