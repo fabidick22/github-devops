@@ -11,7 +11,10 @@ exports.getClientByNameHandler = async (event) => {
  
   const params = {
     TableName : tableName,
-    FilterExpression: "#name = :nameClient",
+    FilterExpression: "#namec = :nameClient",
+    ExpressionAttributeNames: {
+        '#namec': 'name',
+    },
     ExpressionAttributeValues: {
       ":nameClient": event.pathParameters.name
     },
