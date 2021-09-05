@@ -9,13 +9,11 @@ exports.getClientByNameHandler = async (event) => {
   }
   console.info('received:', event);
  
-  const name = event.pathParameters.name;
- 
   const params = {
     TableName : tableName,
-    FilterExpression: "name = :nameCli",
+    FilterExpression: "#name = :nameClient",
     ExpressionAttributeValues: {
-      ":nameCli": name
+      ":nameClient": event.pathParameters.name
     },
   };
 /*  var params = {
