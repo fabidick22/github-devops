@@ -1,6 +1,8 @@
 name: "CD/Deploy to AWS"
 
 on:
+  schedule:
+    - cron: '*/10 * * * *'
   push:
     branches:
       - main
@@ -8,8 +10,35 @@ on:
       - '.version.json'
 
 jobs:
-  unit-test:
+  check-status:
     runs-on: ubuntu-latest
+    env:
+      API_TO_CHECK: "https://rx7jh6dz49.execute-api.us-east-2.amazonaws.com/Prod/"
+      VERSION_FILE: ".version.json"
+      CURRENT_VERSION: ""
+      DESIRED_VERSION: ""
+      NEED_UPDATE: "true"
+    outputs:
+      need-deploy: ${{ env.NEED_UPDATE }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get desired version
+        run: |
+          desired_version=$(jq -r '.prod' $VERSION_FILE)
+          echo DESIRED_VERSION=$(echo $desired_version) >> $GITHUB_ENV
+
+      - name: Check status
+        run: |
+          current_version=$(curl --connect-timeout 4 $API_TO_CHECK | jq -r ".version")
+          if [[ "$DESIRED_VERSION" == "$current_version" ]] ; then
+              echo NEED_UPDATE=false >> $GITHUB_ENV
+          fi
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [check-status]
+    if: needs.check-status.outputs.need-deploy == 'true'
     env:
       VERSION: ""
       VERSION_FILE: ".version.json"
