@@ -1,3 +1,15 @@
+## [1.3.3](https://github.com/fabidick22/github-devops/compare/v1.3.2...v1.3.3) (2021-09-05)
+
+### Bug Fixes
+
+- add # to denote the placeholder ([757c24f](https://github.com/fabidick22/github-devops/commit/757c24ff1451cefb80dacb4648ca8a62db863392))
+
+### Other
+
+- Merge pull request #17 from fabidick22/fix/get-client-by-name-error ([6256f58](https://github.com/fabidick22/github-devops/commit/6256f58cc1cec4b9ac9ed00edb1143b2414f99a2)), closes [#17](https://github.com/fabidick22/github-devops/issues/17)
+- deploy to prod ([56efdcb](https://github.com/fabidick22/github-devops/commit/56efdcbd8d21436437a3c3a147dea6e0e2b9af2c))
+- Update file version ([0e5a80f](https://github.com/fabidick22/github-devops/commit/0e5a80f843d63a69fc94cfb9e3b1a26533dade7a))
+
 ## [1.3.2](https://github.com/fabidick22/github-devops/compare/v1.3.1...v1.3.2) (2021-09-05)
 
 ### Bug Fixes
