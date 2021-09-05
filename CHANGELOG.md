@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/fabidick22/github-devops/compare/v1.2.5...v1.3.0) (2021-09-05)
+
+### Features
+
+- Add check desired state ([d2e5f03](https://github.com/fabidick22/github-devops/commit/d2e5f03f05ff7c98acf780c380aefbbacf1ee613))
+
+### Other
+
+- Merge pull request #14 from fabidick22/cd-agent ([e619aab](https://github.com/fabidick22/github-devops/commit/e619aab0d4be6a0fbd7ccb19d58d5ee4998e88ad)), closes [#14](https://github.com/fabidick22/github-devops/issues/14)
+- deploy to prod ([74231ec](https://github.com/fabidick22/github-devops/commit/74231ec1927a05e6bb62a35884304bf3d8e6d8b6))
+- Update file version ([ac01a37](https://github.com/fabidick22/github-devops/commit/ac01a373b8ca04b8f32e9cccf963203d31ccae3b))
+
 ## [1.2.5](https://github.com/fabidick22/github-devops/compare/v1.2.4...v1.2.5) (2021-09-04)
 
 ### Bug Fixes
