@@ -1,3 +1,15 @@
+## [1.3.4](https://github.com/fabidick22/github-devops/compare/v1.3.3...v1.3.4) (2021-09-05)
+
+### Bug Fixes
+
+- Add ExpressionAttributeNames attribute ([f2c6ffd](https://github.com/fabidick22/github-devops/commit/f2c6ffde28723abfe8913b349b7e4a1c97ce5ee1))
+
+### Other
+
+- Merge pull request #18 from fabidick22/add-observability ([f0fd1b0](https://github.com/fabidick22/github-devops/commit/f0fd1b03ed2cb6c8f94a60aeeac1a26dc87add50)), closes [#18](https://github.com/fabidick22/github-devops/issues/18)
+- deploy to prod ([8d807e7](https://github.com/fabidick22/github-devops/commit/8d807e7858fd752be91110fd71f1e3a05dc0773b))
+- Update file version ([c252996](https://github.com/fabidick22/github-devops/commit/c25299612afe44a737c4aa23d3e256dcb36cb0d8))
+
 ## [1.3.3](https://github.com/fabidick22/github-devops/compare/v1.3.2...v1.3.3) (2021-09-05)
 
 ### Bug Fixes
