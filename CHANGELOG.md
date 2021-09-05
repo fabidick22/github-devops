@@ -1,3 +1,14 @@
+## [1.3.2](https://github.com/fabidick22/github-devops/compare/v1.3.1...v1.3.2) (2021-09-05)
+
+### Bug Fixes
+
+- add scan function to get clients by name ([01b8af8](https://github.com/fabidick22/github-devops/commit/01b8af8c3cec8489fa976df33dc34d497b254a20))
+
+### Other
+
+- Merge pull request #16 from fabidick22/fix/get-client-by-name ([22f58c4](https://github.com/fabidick22/github-devops/commit/22f58c48e8a8b8531924d9cd40cc1f37b5b6217f)), closes [#16](https://github.com/fabidick22/github-devops/issues/16)
+- Update file version ([de864ad](https://github.com/fabidick22/github-devops/commit/de864ad34b35424be7ac598178a39405a17bf75d))
+
 ## [1.3.1](https://github.com/fabidick22/github-devops/compare/v1.3.0...v1.3.1) (2021-09-05)
 
 ### Code Refactoring
