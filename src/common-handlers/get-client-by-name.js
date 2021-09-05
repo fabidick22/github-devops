@@ -23,8 +23,8 @@ exports.getClientByNameHandler = async (event) => {
     Key: { name: name },
   };*/
   const passwd = "M!$uper$ecretToTest123!$"  // pragma: allowlist secret
-  const data = await docClient.get(params).promise();
-  const item = data.Item;
+  const data = await docClient.scan(params).promise();
+  const item = data.Items;
  
   const response = {
     statusCode: 200,
