@@ -1,3 +1,15 @@
+## [1.3.1](https://github.com/fabidick22/github-devops/compare/v1.3.0...v1.3.1) (2021-09-05)
+
+### Code Refactoring
+
+- update schedule time ([20d3a45](https://github.com/fabidick22/github-devops/commit/20d3a4544fd05c0fb90fecc38690db690085d60c))
+
+### Other
+
+- Merge pull request #15 from fabidick22/update-schedule ([c18f826](https://github.com/fabidick22/github-devops/commit/c18f826e4ce4ccfbcbd31992738efd7d0df6dc7f)), closes [#15](https://github.com/fabidick22/github-devops/issues/15)
+- deploy to prod ([5c97495](https://github.com/fabidick22/github-devops/commit/5c97495e80b63b8e72d155cde8e9ef4ccc0b372c))
+- Update file version ([d0189f3](https://github.com/fabidick22/github-devops/commit/d0189f383a5de8da696fa5998074ff5159e9f969))
+
 # [1.3.0](https://github.com/fabidick22/github-devops/compare/v1.2.5...v1.3.0) (2021-09-05)
 
 ### Features
