@@ -1,3 +1,16 @@
+## [1.3.5](https://github.com/fabidick22/github-devops/compare/v1.3.4...v1.3.5) (2021-09-05)
+
+### Documentation
+
+- add badge status ([fbac585](https://github.com/fabidick22/github-devops/commit/fbac585619d9086e712681794e15f6691f77f2a4))
+- Add documentation and diagram ([04cadf6](https://github.com/fabidick22/github-devops/commit/04cadf61c3174875fddada9691b98c9e28e16948))
+
+### Other
+
+- Merge pull request #19 from fabidick22/docs ([02be4fa](https://github.com/fabidick22/github-devops/commit/02be4fac32b5f891099e45b43df1a61a6b8ec020)), closes [#19](https://github.com/fabidick22/github-devops/issues/19)
+- deploy to prod ([fff1bbb](https://github.com/fabidick22/github-devops/commit/fff1bbb2cb57bec23ca07b030814dc1ac6cb1859))
+- Update file version ([9b998c3](https://github.com/fabidick22/github-devops/commit/9b998c3827215e2525b022bf8bf8d491d10ed577))
+
 ## [1.3.4](https://github.com/fabidick22/github-devops/compare/v1.3.3...v1.3.4) (2021-09-05)
 
 ### Bug Fixes
