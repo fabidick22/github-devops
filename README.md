@@ -12,5 +12,9 @@ Github flow implementation
 - Status notifications in Slack
 - Deploy infrastructure with AWS SAM (IaC)
 
+## TODO
+- Multiple environment support
+- Blue/Green deployment
+
 ## CI/CD Pipeline
 ![DevOps Pipeline](https://raw.githubusercontent.com/fabidick22/github-devops/main/.docs/images/Github-Flow.png)
