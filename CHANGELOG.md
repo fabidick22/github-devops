@@ -1,3 +1,14 @@
+## [1.3.6](https://github.com/fabidick22/github-devops/compare/v1.3.5...v1.3.6) (2021-09-06)
+
+### Documentation
+
+- add todo list ([5bf6ef4](https://github.com/fabidick22/github-devops/commit/5bf6ef4730c9554df677a1cf7f2c5dfd03aceb48))
+
+### Other
+
+- Merge pull request #20 from fabidick22/docs ([03c045a](https://github.com/fabidick22/github-devops/commit/03c045a792a09312ec5d854f524843e769de4d7f)), closes [#20](https://github.com/fabidick22/github-devops/issues/20)
+- Update file version ([b32fdc8](https://github.com/fabidick22/github-devops/commit/b32fdc8017ce12115b9b22f1a4500b3978fc2048))
+
 ## [1.3.5](https://github.com/fabidick22/github-devops/compare/v1.3.4...v1.3.5) (2021-09-05)
 
 ### Documentation
