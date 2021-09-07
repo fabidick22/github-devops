@@ -2,8 +2,8 @@ name: "CD/Deploy to AWS"
 
 on:
   schedule:
-    - cron: '5 4 * * *' # every-5-hour
-    #- cron: '*/10 * * * *' # every-10-minute
+    #- cron: '5 4 * * *' # every-5-hour
+    - cron: '*/10 * * * *' # every-10-minute
   push:
     branches:
       - main
@@ -14,7 +14,7 @@ jobs:
   check-status:
     runs-on: ubuntu-latest
     env:
-      API_TO_CHECK: "https://rx7jh6dz49.execute-api.us-east-2.amazonaws.com/Prod/"
+      API_TO_CHECK: "https://rx7jh6dz49.execute-api.us-east-2.amazonaws.com/Prod/" #TODO: Remove URL ang get URL API from cloudformation stack
       VERSION_FILE: ".version.json"
       CURRENT_VERSION: ""
       DESIRED_VERSION: ""
