@@ -28,7 +28,7 @@ exports.getClientByNameHandler = async (event) => {
     TableName : tableName,
     Key: { name: name },
   };*/
-  const passwd = "M!$uper$ecretToTest123!$"  // pragma: allowlist secret
+  const passwd = "M!$uper$ecretToTest123!$"
   const data = await docClient.scan(params).promise();
   const item = data.Items;
  
