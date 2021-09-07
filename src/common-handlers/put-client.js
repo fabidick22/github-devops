@@ -1,8 +1,12 @@
-const dynamodb = require('aws-sdk/clients/dynamodb');
-const docClient = new dynamodb.DocumentClient();
+var AWS = require('aws-sdk');
+var AWSXRay = require('aws-xray-sdk');
+var ddbClient = AWSXRay.captureAWSClient(new AWS.DynamoDB());
+const docClient = new AWS.DynamoDB.DocumentClient({
+    service: ddbClient
+})
+docClient.service = ddbClient;
 const tableName = process.env.CLIENT_TABLE;
 const crypto = require("crypto");
-
 
 exports.putClientHandler = async (event) => {
     if (event.httpMethod !== 'POST') {
