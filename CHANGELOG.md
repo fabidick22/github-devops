@@ -1,3 +1,19 @@
+## [1.3.8](https://github.com/fabidick22/github-devops/compare/v1.3.7...v1.3.8) (2021-09-07)
+
+### Bug Fixes
+
+- add npm install before execute Dependency Check Action ([234e723](https://github.com/fabidick22/github-devops/commit/234e723e048e15d35e96f8675a28ee8e91544f34))
+
+### Code Refactoring
+
+- disable cron agent to deploy in aws ([4af325d](https://github.com/fabidick22/github-devops/commit/4af325dfeac34370d23f5355edda16f15ca9101f))
+
+### Other
+
+- Merge pull request #22 from fabidick22/fix/dependency-checker ([e922066](https://github.com/fabidick22/github-devops/commit/e922066aa49ddbaae088c23abf3235fddc85ea72)), closes [#22](https://github.com/fabidick22/github-devops/issues/22)
+- deploy to prod ([c36191e](https://github.com/fabidick22/github-devops/commit/c36191e0855d99b7726b1328e0394662653abd72))
+- Update file version ([95d9130](https://github.com/fabidick22/github-devops/commit/95d9130a3100a6a5e06b6028d59b77c37c3f4a59))
+
 ## [1.3.7](https://github.com/fabidick22/github-devops/compare/v1.3.6...v1.3.7) (2021-09-07)
 
 ### Code Refactoring
