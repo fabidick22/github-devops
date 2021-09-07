@@ -1,3 +1,16 @@
+## [1.3.7](https://github.com/fabidick22/github-devops/compare/v1.3.6...v1.3.7) (2021-09-07)
+
+### Code Refactoring
+
+- Add observability to resources (x-ray) ([5e09c6c](https://github.com/fabidick22/github-devops/commit/5e09c6cf1cfec5b2995e8cac59d571e780267a34))
+- Add x-ray dependecy ([0503921](https://github.com/fabidick22/github-devops/commit/0503921c146290910a74e6970f4d2644b2ea7570))
+- update cron time to check current state ([95e2104](https://github.com/fabidick22/github-devops/commit/95e2104d1410738786c396c7c5665b04e388f0b5))
+
+### Other
+
+- Merge pull request #21 from fabidick22/tracing-dynamodb ([23eed3c](https://github.com/fabidick22/github-devops/commit/23eed3c084a150d3053d056545fc50a0bebeb8bc)), closes [#21](https://github.com/fabidick22/github-devops/issues/21)
+- Update file version ([b8bcb3a](https://github.com/fabidick22/github-devops/commit/b8bcb3ac08f0a1a4710e44f59e4cdb47dd8ded94))
+
 ## [1.3.6](https://github.com/fabidick22/github-devops/compare/v1.3.5...v1.3.6) (2021-09-06)
 
 ### Documentation
